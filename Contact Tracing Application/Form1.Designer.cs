@@ -1,7 +1,7 @@
 ﻿
 namespace Contact_Tracing_Application
 {
-    partial class Form1
+    partial class contactTracingForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,13 +38,20 @@ namespace Contact_Tracing_Application
             this.forAddress = new System.Windows.Forms.Label();
             this.addressInput = new System.Windows.Forms.TextBox();
             this.forTemp = new System.Windows.Forms.Label();
+            this.forNickname = new System.Windows.Forms.Label();
+            this.nicknameInput = new System.Windows.Forms.TextBox();
+            this.usualSymptoms = new System.Windows.Forms.CheckedListBox();
+            this.unusualSymptoms = new System.Windows.Forms.CheckedListBox();
+            this.questionForSymptoms = new System.Windows.Forms.Label();
+            this.forUsualSymptoms = new System.Windows.Forms.Label();
+            this.forUnusualSymptoms = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // welcomingLabel
             // 
             this.welcomingLabel.AutoSize = true;
             this.welcomingLabel.Font = new System.Drawing.Font("Tekton Pro", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.welcomingLabel.Location = new System.Drawing.Point(53, 19);
+            this.welcomingLabel.Location = new System.Drawing.Point(75, 19);
             this.welcomingLabel.Name = "welcomingLabel";
             this.welcomingLabel.Size = new System.Drawing.Size(333, 35);
             this.welcomingLabel.TabIndex = 0;
@@ -54,7 +61,7 @@ namespace Contact_Tracing_Application
             // 
             this.messageLabel.AutoSize = true;
             this.messageLabel.Font = new System.Drawing.Font("Calibri Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.messageLabel.Location = new System.Drawing.Point(49, 55);
+            this.messageLabel.Location = new System.Drawing.Point(70, 55);
             this.messageLabel.Name = "messageLabel";
             this.messageLabel.Size = new System.Drawing.Size(343, 28);
             this.messageLabel.TabIndex = 1;
@@ -65,16 +72,16 @@ namespace Contact_Tracing_Application
             // forName
             // 
             this.forName.AutoSize = true;
-            this.forName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.forName.Location = new System.Drawing.Point(49, 120);
+            this.forName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.forName.Location = new System.Drawing.Point(70, 120);
             this.forName.Name = "forName";
-            this.forName.Size = new System.Drawing.Size(44, 15);
+            this.forName.Size = new System.Drawing.Size(47, 15);
             this.forName.TabIndex = 2;
             this.forName.Text = "Name :";
             // 
             // nameInput
             // 
-            this.nameInput.Location = new System.Drawing.Point(99, 117);
+            this.nameInput.Location = new System.Drawing.Point(123, 117);
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(221, 23);
             this.nameInput.TabIndex = 3;
@@ -83,7 +90,7 @@ namespace Contact_Tracing_Application
             // 
             this.nameInputGuide.AutoSize = true;
             this.nameInputGuide.Font = new System.Drawing.Font("Calibri Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameInputGuide.Location = new System.Drawing.Point(108, 143);
+            this.nameInputGuide.Location = new System.Drawing.Point(131, 143);
             this.nameInputGuide.Name = "nameInputGuide";
             this.nameInputGuide.Size = new System.Drawing.Size(200, 14);
             this.nameInputGuide.TabIndex = 4;
@@ -92,26 +99,26 @@ namespace Contact_Tracing_Application
             // forAge
             // 
             this.forAge.AutoSize = true;
-            this.forAge.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.forAge.Location = new System.Drawing.Point(49, 180);
+            this.forAge.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.forAge.Location = new System.Drawing.Point(70, 240);
             this.forAge.Name = "forAge";
-            this.forAge.Size = new System.Drawing.Size(35, 15);
+            this.forAge.Size = new System.Drawing.Size(38, 15);
             this.forAge.TabIndex = 5;
             this.forAge.Text = "Age : ";
             // 
             // forAddress
             // 
             this.forAddress.AutoSize = true;
-            this.forAddress.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.forAddress.Location = new System.Drawing.Point(49, 240);
+            this.forAddress.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.forAddress.Location = new System.Drawing.Point(70, 300);
             this.forAddress.Name = "forAddress";
-            this.forAddress.Size = new System.Drawing.Size(60, 15);
+            this.forAddress.Size = new System.Drawing.Size(61, 15);
             this.forAddress.TabIndex = 6;
             this.forAddress.Text = "Address : ";
             // 
             // addressInput
             // 
-            this.addressInput.Location = new System.Drawing.Point(115, 237);
+            this.addressInput.Location = new System.Drawing.Point(137, 297);
             this.addressInput.Multiline = true;
             this.addressInput.Name = "addressInput";
             this.addressInput.Size = new System.Drawing.Size(205, 58);
@@ -120,18 +127,104 @@ namespace Contact_Tracing_Application
             // forTemp
             // 
             this.forTemp.AutoSize = true;
-            this.forTemp.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.forTemp.Location = new System.Drawing.Point(49, 350);
+            this.forTemp.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.forTemp.Location = new System.Drawing.Point(70, 400);
             this.forTemp.Name = "forTemp";
-            this.forTemp.Size = new System.Drawing.Size(81, 15);
+            this.forTemp.Size = new System.Drawing.Size(86, 15);
             this.forTemp.TabIndex = 8;
             this.forTemp.Text = "Temperature :";
             // 
-            // Form1
+            // forNickname
+            // 
+            this.forNickname.AutoSize = true;
+            this.forNickname.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.forNickname.Location = new System.Drawing.Point(70, 180);
+            this.forNickname.Name = "forNickname";
+            this.forNickname.Size = new System.Drawing.Size(68, 15);
+            this.forNickname.TabIndex = 9;
+            this.forNickname.Text = "Nickname :";
+            // 
+            // nicknameInput
+            // 
+            this.nicknameInput.Location = new System.Drawing.Point(144, 177);
+            this.nicknameInput.Name = "nicknameInput";
+            this.nicknameInput.Size = new System.Drawing.Size(146, 23);
+            this.nicknameInput.TabIndex = 10;
+            // 
+            // usualSymptoms
+            // 
+            this.usualSymptoms.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usualSymptoms.FormattingEnabled = true;
+            this.usualSymptoms.Items.AddRange(new object[] {
+            "Fever (Lagnat)",
+            "Dry Cough (Tuyong ubo)",
+            "Sore Throat (Namamagang lalamunan)",
+            "Shortness of Breath (Hirap sa paghinga)",
+            "Loss of Smell and Taste (Pagkawala ng pang-amoy at panglasa)"});
+            this.usualSymptoms.Location = new System.Drawing.Point(55, 482);
+            this.usualSymptoms.Name = "usualSymptoms";
+            this.usualSymptoms.Size = new System.Drawing.Size(373, 89);
+            this.usualSymptoms.TabIndex = 11;
+            // 
+            // unusualSymptoms
+            // 
+            this.unusualSymptoms.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.unusualSymptoms.FormattingEnabled = true;
+            this.unusualSymptoms.Items.AddRange(new object[] {
+            "Fatigue (Pagkapagod)",
+            "Body Ache (Pananakit ng katawan)",
+            "Headache (Pananakit ng ulo)",
+            "Runny Nose (Sipon)",
+            "Diarrhea (Pagdudumi)"});
+            this.unusualSymptoms.Location = new System.Drawing.Point(55, 609);
+            this.unusualSymptoms.Name = "unusualSymptoms";
+            this.unusualSymptoms.Size = new System.Drawing.Size(212, 89);
+            this.unusualSymptoms.TabIndex = 12;
+            // 
+            // questionForSymptoms
+            // 
+            this.questionForSymptoms.AutoSize = true;
+            this.questionForSymptoms.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionForSymptoms.Location = new System.Drawing.Point(55, 440);
+            this.questionForSymptoms.Name = "questionForSymptoms";
+            this.questionForSymptoms.Size = new System.Drawing.Size(130, 15);
+            this.questionForSymptoms.TabIndex = 13;
+            this.questionForSymptoms.Text = "Are you experiencing :";
+            // 
+            // forUsualSymptoms
+            // 
+            this.forUsualSymptoms.AutoSize = true;
+            this.forUsualSymptoms.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.forUsualSymptoms.Location = new System.Drawing.Point(70, 465);
+            this.forUsualSymptoms.Name = "forUsualSymptoms";
+            this.forUsualSymptoms.Size = new System.Drawing.Size(142, 14);
+            this.forUsualSymptoms.TabIndex = 14;
+            this.forUsualSymptoms.Text = "Most Common Symptoms";
+            // 
+            // forUnusualSymptoms
+            // 
+            this.forUnusualSymptoms.AutoSize = true;
+            this.forUnusualSymptoms.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.forUnusualSymptoms.Location = new System.Drawing.Point(70, 592);
+            this.forUnusualSymptoms.Name = "forUnusualSymptoms";
+            this.forUnusualSymptoms.Size = new System.Drawing.Size(171, 14);
+            this.forUnusualSymptoms.TabIndex = 15;
+            this.forUnusualSymptoms.Text = "Some Patients may also have :";
+            // 
+            // contactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 30);
+            this.ClientSize = new System.Drawing.Size(536, 380);
+            this.Controls.Add(this.forUnusualSymptoms);
+            this.Controls.Add(this.forUsualSymptoms);
+            this.Controls.Add(this.questionForSymptoms);
+            this.Controls.Add(this.unusualSymptoms);
+            this.Controls.Add(this.usualSymptoms);
+            this.Controls.Add(this.nicknameInput);
+            this.Controls.Add(this.forNickname);
             this.Controls.Add(this.forTemp);
             this.Controls.Add(this.addressInput);
             this.Controls.Add(this.forAddress);
@@ -141,8 +234,9 @@ namespace Contact_Tracing_Application
             this.Controls.Add(this.forName);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.welcomingLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "contactTracingForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LA\'s Contact Tracing Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,6 +253,13 @@ namespace Contact_Tracing_Application
         private System.Windows.Forms.Label forAddress;
         private System.Windows.Forms.TextBox addressInput;
         private System.Windows.Forms.Label forTemp;
+        private System.Windows.Forms.Label forNickname;
+        private System.Windows.Forms.TextBox nicknameInput;
+        private System.Windows.Forms.CheckedListBox usualSymptoms;
+        private System.Windows.Forms.CheckedListBox unusualSymptoms;
+        private System.Windows.Forms.Label questionForSymptoms;
+        private System.Windows.Forms.Label forUsualSymptoms;
+        private System.Windows.Forms.Label forUnusualSymptoms;
     }
 }
 
