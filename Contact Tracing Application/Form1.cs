@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Contact_Tracing_Application
@@ -13,28 +14,64 @@ namespace Contact_Tracing_Application
 
         private void nameInput_Click(object sender, EventArgs e)
         {
-            nameInput.Text = string.Empty;
+            if (nameInput.Text == "This field is optional.")
+            {
+                ageInput.Text = string.Empty;
+            }
         }
 
         private void nicknameInput_Click(object sender, EventArgs e)
         {
-            nameInput.Text = string.Empty;
+            if (nicknameInput.Text == "Required")
+            {
+                nicknameInput.Text = string.Empty;
+            }
         }
 
         private void ageInput_Click(object sender, EventArgs e)
         {
-            nameInput.Text = string.Empty;
+            if (ageInput.Text == "Required")
+            {
+                ageInput.Text = string.Empty;
+            }
         }
 
         private void addressInput_Click(object sender, EventArgs e)
         {
-            nameInput.Text = string.Empty;
+            if (addressInput.Text == "Required")
+            {
+                addressInput.Text = string.Empty;
+            }
         }
 
         private void temperatureInput_Click(object sender, EventArgs e)
         {
-            nameInput.Text = string.Empty;
+            if (temperatureInput.Text == "Required")
+            {
+                temperatureInput.Text = string.Empty;
+            }
         }
 
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(ageInput.Text) < 18)
+            {
+                MessageBox.Show("Minors are not allowed!");
+            }
+            else if (Convert.ToInt32(ageInput.Text) > 65)
+            {
+                MessageBox.Show("Above 65 years old  are not allowed!");
+            }
+            else if (nicknameInput.Text == "Required" || nicknameInput.Text == "" ||
+                addressInput.Text == "Required" || addressInput.Text == "" ||
+                temperatureInput.Text == "Required" || temperatureInput.Text == "")
+            {
+                MessageBox.Show("Incomplete fields!");
+            }
+            else
+            {
+                Close();
+            }
+        }
     }
 }
