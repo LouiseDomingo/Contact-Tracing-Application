@@ -91,6 +91,8 @@ namespace Contact_Tracing_Application
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(221, 23);
             this.nameInput.TabIndex = 3;
+            this.nameInput.Text = "This field is optional.";
+            this.nameInput.Click += new System.EventHandler(this.nameInput_Click);
             // 
             // nameInputGuide
             // 
@@ -132,6 +134,8 @@ namespace Contact_Tracing_Application
             this.addressInput.Name = "addressInput";
             this.addressInput.Size = new System.Drawing.Size(205, 58);
             this.addressInput.TabIndex = 7;
+            this.addressInput.Text = "Required";
+            this.addressInput.Click += new System.EventHandler(this.addressInput_Click);
             // 
             // forTemp
             // 
@@ -161,9 +165,12 @@ namespace Contact_Tracing_Application
             this.nicknameInput.Name = "nicknameInput";
             this.nicknameInput.Size = new System.Drawing.Size(146, 23);
             this.nicknameInput.TabIndex = 10;
+            this.nicknameInput.Text = "Required";
+            this.nicknameInput.Click += new System.EventHandler(this.nicknameInput_Click);
             // 
             // usualSymptoms
             // 
+            this.usualSymptoms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.usualSymptoms.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.usualSymptoms.FormattingEnabled = true;
             this.usualSymptoms.Items.AddRange(new object[] {
@@ -179,6 +186,7 @@ namespace Contact_Tracing_Application
             // 
             // unusualSymptoms
             // 
+            this.unusualSymptoms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.unusualSymptoms.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.unusualSymptoms.FormattingEnabled = true;
             this.unusualSymptoms.Items.AddRange(new object[] {
@@ -241,6 +249,8 @@ namespace Contact_Tracing_Application
             this.ageInput.Name = "ageInput";
             this.ageInput.Size = new System.Drawing.Size(100, 23);
             this.ageInput.TabIndex = 17;
+            this.ageInput.Text = "Required";
+            this.ageInput.Click += new System.EventHandler(this.ageInput_Click);
             // 
             // temperatureInput
             // 
@@ -248,6 +258,8 @@ namespace Contact_Tracing_Application
             this.temperatureInput.Name = "temperatureInput";
             this.temperatureInput.Size = new System.Drawing.Size(100, 23);
             this.temperatureInput.TabIndex = 18;
+            this.temperatureInput.Text = "Required";
+            this.temperatureInput.Click += new System.EventHandler(this.temperatureInput_Click);
             // 
             // contactTracingForm
             // 
@@ -257,7 +269,7 @@ namespace Contact_Tracing_Application
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.BackgroundImage = global::Contact_Tracing_Application.Properties.Resources.tryer;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(570, 380);
+            this.ClientSize = new System.Drawing.Size(587, 758);
             this.Controls.Add(this.temperatureInput);
             this.Controls.Add(this.ageInput);
             this.Controls.Add(this.submitBtn);
