@@ -28,14 +28,6 @@ namespace Contact_Tracing_Application
             }
         }
 
-        private void ageInput_Click(object sender, EventArgs e)
-        {
-            if (ageInput.Text == "Required")
-            {
-                ageInput.Text = string.Empty;
-            }
-        }
-
         private void addressInput_Click(object sender, EventArgs e)
         {
             if (addressInput.Text == "Required")
@@ -44,17 +36,13 @@ namespace Contact_Tracing_Application
             }
         }
 
-        private void temperatureInput_Click(object sender, EventArgs e)
-        {
-            if (temperatureInput.Text == "Required")
-            {
-                temperatureInput.Text = string.Empty;
-            }
-        }
-
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(ageInput.Text) < 18)
+            if (ageInput.Text == "" || contactNoInput.Text == "" || temperatureInput.Text == "")
+            {
+                MessageBox.Show("Incomplete fields!");
+            }    
+            else if (Convert.ToInt32(ageInput.Text) < 18)
             {
                 MessageBox.Show("Minors are not allowed!");
             }
@@ -63,8 +51,7 @@ namespace Contact_Tracing_Application
                 MessageBox.Show("Above 65 years old  are not allowed!");
             }
             else if (nicknameInput.Text == "Required" || nicknameInput.Text == "" ||
-                addressInput.Text == "Required" || addressInput.Text == "" ||
-                temperatureInput.Text == "Required" || temperatureInput.Text == "")
+                addressInput.Text == "Required" || addressInput.Text == "")
             {
                 MessageBox.Show("Incomplete fields!");
             }
