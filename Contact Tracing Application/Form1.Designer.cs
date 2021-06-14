@@ -50,6 +50,7 @@ namespace Contact_Tracing_Application
             this.contactNoInput = new System.Windows.Forms.MaskedTextBox();
             this.forTemp = new System.Windows.Forms.Label();
             this.temperatureInput = new System.Windows.Forms.MaskedTextBox();
+            this.dataAccessBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // welcomingLabel
@@ -289,6 +290,16 @@ namespace Contact_Tracing_Application
             this.temperatureInput.Size = new System.Drawing.Size(100, 23);
             this.temperatureInput.TabIndex = 23;
             // 
+            // dataAccessBtn
+            // 
+            this.dataAccessBtn.BackColor = System.Drawing.Color.Transparent;
+            this.dataAccessBtn.Location = new System.Drawing.Point(421, 816);
+            this.dataAccessBtn.Name = "dataAccessBtn";
+            this.dataAccessBtn.Size = new System.Drawing.Size(185, 50);
+            this.dataAccessBtn.TabIndex = 24;
+            this.dataAccessBtn.Text = "DO NOT OPEN!\r\nFor authorized personnel only! \r\n";
+            this.dataAccessBtn.UseVisualStyleBackColor = false;
+            // 
             // contactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -297,7 +308,8 @@ namespace Contact_Tracing_Application
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.BackgroundImage = global::Contact_Tracing_Application.Properties.Resources.tryer;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 431);
+            this.ClientSize = new System.Drawing.Size(635, 436);
+            this.Controls.Add(this.dataAccessBtn);
             this.Controls.Add(this.temperatureInput);
             this.Controls.Add(this.contactNoInput);
             this.Controls.Add(this.forContactNo);
@@ -351,6 +363,7 @@ namespace Contact_Tracing_Application
         private System.Windows.Forms.MaskedTextBox contactNoInput;
         private System.Windows.Forms.Label forTemp;
         private System.Windows.Forms.MaskedTextBox temperatureInput;
+        private System.Windows.Forms.Button dataAccessBtn;
     }
 }
 
