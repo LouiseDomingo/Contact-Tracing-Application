@@ -38,7 +38,7 @@ namespace Contact_Tracing_Application
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            if (ageInput.Text == "" || contactNoInput.Text == "")
+            if (ageInput.Text == "" || contactNoInput.Text == "" || temperatureInput.Text == "")
             {
                 MessageBox.Show("Incomplete fields!");
             }    

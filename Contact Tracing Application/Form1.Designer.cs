@@ -49,6 +49,7 @@ namespace Contact_Tracing_Application
             this.forContactNo = new System.Windows.Forms.Label();
             this.contactNoInput = new System.Windows.Forms.MaskedTextBox();
             this.forTemp = new System.Windows.Forms.Label();
+            this.temperatureInput = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // welcomingLabel
@@ -278,6 +279,16 @@ namespace Contact_Tracing_Application
             this.forTemp.TabIndex = 8;
             this.forTemp.Text = "Temperature :";
             // 
+            // temperatureInput
+            // 
+            this.temperatureInput.Location = new System.Drawing.Point(212, 447);
+            this.temperatureInput.Mask = "00.00";
+            this.temperatureInput.Name = "temperatureInput";
+            this.temperatureInput.PromptChar = '-';
+            this.temperatureInput.RejectInputOnFirstFailure = true;
+            this.temperatureInput.Size = new System.Drawing.Size(100, 23);
+            this.temperatureInput.TabIndex = 23;
+            // 
             // contactTracingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -286,7 +297,8 @@ namespace Contact_Tracing_Application
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.BackgroundImage = global::Contact_Tracing_Application.Properties.Resources.tryer;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(604, 576);
+            this.ClientSize = new System.Drawing.Size(584, 431);
+            this.Controls.Add(this.temperatureInput);
             this.Controls.Add(this.contactNoInput);
             this.Controls.Add(this.forContactNo);
             this.Controls.Add(this.ageInput);
@@ -338,6 +350,7 @@ namespace Contact_Tracing_Application
         private System.Windows.Forms.Label forContactNo;
         private System.Windows.Forms.MaskedTextBox contactNoInput;
         private System.Windows.Forms.Label forTemp;
+        private System.Windows.Forms.MaskedTextBox temperatureInput;
     }
 }
 
