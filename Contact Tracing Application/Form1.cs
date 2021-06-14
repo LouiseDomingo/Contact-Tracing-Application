@@ -57,7 +57,42 @@ namespace Contact_Tracing_Application
             }
             else
             {
+               StreamWriter contactTracingFile;
+                string visitationDate = DateTime.Now.ToLongDateString();
+                contactTracingFile = File.AppendText(visitationDate + ".txt");
+                contactTracingFile.WriteLine("\nName : " + nameInput.Text);
+                contactTracingFile.WriteLine("Nickname : " + nicknameInput.Text);
+                contactTracingFile.WriteLine("Age : " + ageInput.Text);
+                contactTracingFile.WriteLine("Address : " + addressInput.Text);
+                contactTracingFile.WriteLine("Contact Number : " + contactNoInput.Text);
+                contactTracingFile.WriteLine("Temperature : " + temperatureInput.Text);
+                
+                string firstSymp = string.Empty;
+                if (usualSymptoms.CheckedItems.Count != 0)
+                { 
+                    for(byte x = 0; x < usualSymptoms.CheckedItems.Count; x++)
+                    {
+                        firstSymp = firstSymp + usualSymptoms.CheckedItems[x].ToString() + " , ";
+                    }
+                }
+                contactTracingFile.WriteLine("Usual Symptoms : " + firstSymp);
+
+                string secondSymp = string.Empty;
+                if (unusualSymptoms.CheckedItems.Count != 0)
+                {
+                    for (byte x = 0; x < unusualSymptoms.CheckedItems.Count; x++)
+                    {
+                        secondSymp = secondSymp + unusualSymptoms.CheckedItems[x].ToString() + " , ";
+                    }
+                }
+                contactTracingFile.WriteLine("Unusual Symptoms : " + secondSymp);
+
+                contactTracingFile.WriteLine("\n==============================");
+                contactTracingFile.Close();
+
+                MessageBox.Show("Accepted! Thank you and\nWelcome to our coffee shop!");
                 Close();
+
             }
         }
     }
