@@ -42,6 +42,7 @@ namespace Contact_Tracing_Application
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(200, 23);
             this.datePicker.TabIndex = 0;
+            this.datePicker.ValueChanged += new System.EventHandler(this.datePicker_ValueChanged);
             // 
             // headerLabel
             // 

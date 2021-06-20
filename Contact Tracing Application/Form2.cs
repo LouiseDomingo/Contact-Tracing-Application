@@ -26,12 +26,28 @@ namespace Contact_Tracing_Application
         {
             string visitationDate = datePicker.Value.ToLongDateString();
             
-            StreamReader dataFile;
-            dataFile = File.OpenText(visitationDate + ".txt");
-            while (!dataFile.EndOfStream)
+            try
             {
-                listViewer.Items.Add(dataFile.ReadLine());
+                StreamReader dataFile;
+                dataFile = File.OpenText(visitationDate + ".txt");
+                while (!dataFile.EndOfStream)
+                {
+                    listViewer.Items.Add(dataFile.ReadLine());
+                    goBtn.Enabled = false;
+                }
             }
+            
+            catch (Exception)
+            {
+                listViewer.Items.Add("No available data for " + visitationDate);
+            }
+
+        }
+
+        private void datePicker_ValueChanged(object sender, EventArgs e)
+        {
+            goBtn.Enabled = true;
+            listViewer.Items.Clear();
         }
     }
 }
