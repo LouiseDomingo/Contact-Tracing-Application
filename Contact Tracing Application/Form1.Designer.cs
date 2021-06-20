@@ -293,9 +293,10 @@ namespace Contact_Tracing_Application
             // dataAccessBtn
             // 
             this.dataAccessBtn.BackColor = System.Drawing.Color.Transparent;
-            this.dataAccessBtn.Location = new System.Drawing.Point(421, 816);
+            this.dataAccessBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataAccessBtn.Location = new System.Drawing.Point(12, 824);
             this.dataAccessBtn.Name = "dataAccessBtn";
-            this.dataAccessBtn.Size = new System.Drawing.Size(185, 50);
+            this.dataAccessBtn.Size = new System.Drawing.Size(153, 58);
             this.dataAccessBtn.TabIndex = 24;
             this.dataAccessBtn.Text = "DO NOT OPEN!\r\nFor authorized personnel only! \r\n";
             this.dataAccessBtn.UseVisualStyleBackColor = false;
@@ -309,7 +310,7 @@ namespace Contact_Tracing_Application
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.BackgroundImage = global::Contact_Tracing_Application.Properties.Resources.tryer;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(652, 436);
+            this.ClientSize = new System.Drawing.Size(664, 436);
             this.Controls.Add(this.dataAccessBtn);
             this.Controls.Add(this.temperatureInput);
             this.Controls.Add(this.contactNoInput);

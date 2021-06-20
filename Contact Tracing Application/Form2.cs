@@ -32,8 +32,6 @@ namespace Contact_Tracing_Application
             {
                 listViewer.Items.Add(dataFile.ReadLine());
             }
-            
-            
         }
     }
 }
