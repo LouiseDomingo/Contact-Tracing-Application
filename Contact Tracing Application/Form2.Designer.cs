@@ -98,7 +98,7 @@ namespace Contact_Tracing_Application
             this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.datePicker);
             this.Name = "directoryForm";
-            this.Text = "Form2";
+            this.Text = "LA\'s Coffee Shop Directory Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
