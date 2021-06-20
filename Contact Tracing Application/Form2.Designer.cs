@@ -33,7 +33,7 @@ namespace Contact_Tracing_Application
             this.headerLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.goBtn = new System.Windows.Forms.Button();
-            this.listViewer = new System.Windows.Forms.TextBox();
+            this.listViewer = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // datePicker
@@ -74,14 +74,16 @@ namespace Contact_Tracing_Application
             this.goBtn.TabIndex = 3;
             this.goBtn.Text = "GO";
             this.goBtn.UseVisualStyleBackColor = false;
+            this.goBtn.Click += new System.EventHandler(this.goBtn_Click);
             // 
             // listViewer
             // 
+            this.listViewer.FormattingEnabled = true;
+            this.listViewer.ItemHeight = 15;
             this.listViewer.Location = new System.Drawing.Point(125, 125);
-            this.listViewer.Multiline = true;
             this.listViewer.Name = "listViewer";
-            this.listViewer.Size = new System.Drawing.Size(350, 262);
-            this.listViewer.TabIndex = 4;
+            this.listViewer.Size = new System.Drawing.Size(350, 259);
+            this.listViewer.TabIndex = 5;
             // 
             // directoryForm
             // 
@@ -107,6 +109,6 @@ namespace Contact_Tracing_Application
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Button goBtn;
-        private System.Windows.Forms.TextBox listViewer;
+        private System.Windows.Forms.ListBox listViewer;
     }
 }

@@ -6,9 +6,12 @@ namespace Contact_Tracing_Application
 {
     public partial class contactTracingForm : Form
     {
+        public static contactTracingForm contactTracing;
+
         public contactTracingForm()
         {
             InitializeComponent();
+            contactTracing = this;
         }
 
 
@@ -94,6 +97,12 @@ namespace Contact_Tracing_Application
                 Close();
 
             }
+        }
+
+        private void dataAccessBtn_Click(object sender, EventArgs e)
+        {
+            directoryForm data = new directoryForm();
+            data.Show();
         }
     }
 }

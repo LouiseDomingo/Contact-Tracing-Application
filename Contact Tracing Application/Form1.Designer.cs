@@ -299,6 +299,7 @@ namespace Contact_Tracing_Application
             this.dataAccessBtn.TabIndex = 24;
             this.dataAccessBtn.Text = "DO NOT OPEN!\r\nFor authorized personnel only! \r\n";
             this.dataAccessBtn.UseVisualStyleBackColor = false;
+            this.dataAccessBtn.Click += new System.EventHandler(this.dataAccessBtn_Click);
             // 
             // contactTracingForm
             // 
@@ -308,7 +309,7 @@ namespace Contact_Tracing_Application
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.BackgroundImage = global::Contact_Tracing_Application.Properties.Resources.tryer;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(635, 436);
+            this.ClientSize = new System.Drawing.Size(652, 436);
             this.Controls.Add(this.dataAccessBtn);
             this.Controls.Add(this.temperatureInput);
             this.Controls.Add(this.contactNoInput);
