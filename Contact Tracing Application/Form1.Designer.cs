@@ -310,7 +310,7 @@ namespace Contact_Tracing_Application
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.BackgroundImage = global::Contact_Tracing_Application.Properties.Resources.tryer;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(664, 436);
+            this.ClientSize = new System.Drawing.Size(584, 436);
             this.Controls.Add(this.dataAccessBtn);
             this.Controls.Add(this.temperatureInput);
             this.Controls.Add(this.contactNoInput);
